@@ -15,45 +15,46 @@ function init() {
 }
 
 function setUpIMA() {
-  // Create the ad display container.
-  createAdDisplayContainer();
-  // Create ads loader.
-  adsLoader = new google.ima.AdsLoader(adDisplayContainer);
-  adsLoader.getSettings().setDisableCustomPlaybackForIOS10Plus(true);
-  // Listen and respond to ads loaded and error events.
-  adsLoader.addEventListener(
-      google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED,
-      onAdsManagerLoaded,
-      false);
-  adsLoader.addEventListener(
-      google.ima.AdErrorEvent.Type.AD_ERROR,
-      onAdError,
-      false);
+                      // Create the ad display container.
+                      createAdDisplayContainer();
+                      // Create ads loader.
+                      adsLoader = new google.ima.AdsLoader(adDisplayContainer);
+                      adsLoader
+                        .getSettings()
+                        .setDisableCustomPlaybackForIOS10Plus(
+                          true
+                        );
+                      // Listen and respond to ads loaded and error events.
+                      adsLoader.addEventListener(google.ima.AdsManagerLoadedEvent.Type.ADS_MANAGER_LOADED, onAdsManagerLoaded, false);
+                      adsLoader.addEventListener(google.ima.AdErrorEvent.Type.AD_ERROR, onAdError, false);
 
-  // An event listener to tell the SDK that our content video
-  // is completed so the SDK can play any post-roll ads.
-  var contentEndedListener = function() {adsLoader.contentComplete();};
-  videoContent.onended = contentEndedListener;
+                      // An event listener to tell the SDK that our content video
+                      // is completed so the SDK can play any post-roll ads.
+                      var contentEndedListener = function() {
+                        adsLoader.contentComplete();
+                      };
+                      videoContent.onended = contentEndedListener;
 
-  // Request video ads.
-  var adsRequest = new google.ima.AdsRequest();
-  // adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
-  //     'sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&' +
-  //     'impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&' +
-  //     'cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&' +
-  //     'correlator=';
+                      // Request video ads.
+                      var adsRequest = new google.ima.AdsRequest();
+                      // adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
+                      //     'sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&' +
+                      //     'impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&' +
+                      //     'cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&' +
+                      //     'correlator=';
 
-var adsRequest = "//mconnor.github.io/testVast/vast-icon-iframe-resource.xml";
-  // Specify the linear and nonlinear slot sizes. This helps the SDK to
-  // select the correct creative if multiple are returned.
-  adsRequest.linearAdSlotWidth = 640;
-  adsRequest.linearAdSlotHeight = 400;
+                      // adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
+                      var adsRequest = "//mconnor.github.io/testVast/vast-icon-iframe-resource.xml";
+                      // Specify the linear and nonlinear slot sizes. This helps the SDK to
+                      // select the correct creative if multiple are returned.
+                      adsRequest.linearAdSlotWidth = 640;
+                      adsRequest.linearAdSlotHeight = 400;
 
-  adsRequest.nonLinearAdSlotWidth = 640;
-  adsRequest.nonLinearAdSlotHeight = 150;
+                      adsRequest.nonLinearAdSlotWidth = 640;
+                      adsRequest.nonLinearAdSlotHeight = 150;
 
-  adsLoader.requestAds(adsRequest);
-}
+                      adsLoader.requestAds(adsRequest);
+                    }
 
 
 function createAdDisplayContainer() {
