@@ -44,7 +44,7 @@ function setUpIMA() {
                       //     'correlator=';
 
                       // adsRequest.adTagUrl = 'https://pubads.g.doubleclick.net/gampad/ads?' +
-                      var adsRequest = "//mconnor.github.io/testVast/vast-icon-iframe-resource.xml";
+                      adsRequest.adTagUrl = "//mconnor.github.io/testVast/vast-icon-iframe-resource.xml";
                       // Specify the linear and nonlinear slot sizes. This helps the SDK to
                       // select the correct creative if multiple are returned.
                       adsRequest.linearAdSlotWidth = 640;
