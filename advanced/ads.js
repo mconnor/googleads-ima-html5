@@ -59,9 +59,9 @@ Ads.prototype.pause = function() {
   }
 };
 
-Ads.prototype.mute = function() {
+Ads.prototype.setVolume = function() {
   if (this.adsManager_) {
-    this.adsManager_.mute();
+    this.adsManager_.setVolume(0);
   }
 };
 
