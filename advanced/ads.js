@@ -59,6 +59,12 @@ Ads.prototype.pause = function() {
   }
 };
 
+Ads.prototype.mute = function() {
+  if (this.adsManager_) {
+    this.adsManager_.mute();
+  }
+};
+
 Ads.prototype.resume = function() {
   if (this.adsManager_) {
     this.adsManager_.resume();
