@@ -4,10 +4,10 @@ Google Ads HTML5 IMA SDK
 This project hosts samples for the [HTML5 IMA SDK](https://developers.google.com/interactive-media-ads/docs/sdks/html5/v3/).
 
 ### Samples Breakdown
-  * [Simple](https://github.com/googleads/googleads-ima-html5/tree/master/simple) - the bare minimum required for an IMA integration
-  * [Advanced]( https://mconnor.github.io/googleads-ima-html5/tree/master/advanced) - IMA integration with more advanced UI including event logging, play/pause, and fullscreen, and companion ads
-  * [Playlist](https://github.com/googleads/googleads-ima-html5/tree/master/playlist) - expands on the advanced sample to demonstrate an integration with a video playlist
-  * [VPAID](https://github.com/googleads/googleads-ima-html5/tree/master/vpaid) - A sample VPAID ad that works with the IMA SDK
+  * [Simple](https://mconnor.github.io/googleads-ima-html5/simple) - the bare minimum required for an IMA integration
+  * [Advanced](https://mconnor.github.io/googleads-ima-html5/advanced/) - IMA integration with more advanced UI including event logging, play/pause, and fullscreen, and companion ads
+  * [Playlist](https://mconnor.github.io/googleads-ima-html5/playlist) - expands on the advanced sample to demonstrate an integration with a video playlist
+  * [VPAID](https://mconnor.github.io/googleads-ima-html5/vpaid) - A sample VPAID ad that works with the IMA SDK
 
 ### Requirements
   * Your favorite text editor

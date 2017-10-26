@@ -48,7 +48,6 @@ var Application = function() {
   this.videoPlayer_ = new VideoPlayer();
   this.ads_ = new Ads(this, this.videoPlayer_);
 
-  this.ads_.setVolume(0);
 
 
   this.adTagUrl_ = '';
