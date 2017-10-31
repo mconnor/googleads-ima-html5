@@ -17,3 +17,6 @@
   height: 360px;
   overflow: hidden;
 }
+p {
+  width: 640px;
+}
