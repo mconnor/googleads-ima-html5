@@ -20,3 +20,28 @@
 p {
   width: 640px;
 }
+
+
+
+#playpause {
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+  height: 40px;
+  width: 100px;
+  border-style: none;
+  font-weight: bold;
+  font-size: 25px;
+  opacity: 0.5;
+  background-color: #fff;
+  border-radius: 5px;
+  border: 1px transparent solid;
+  color: #000;
+  cursor: pointer;
+  line-height: 0;
+}
+
+#playpause:hover {
+  border: 1px #f00 solid;
+  color: #f00;
+}
