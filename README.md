@@ -6,6 +6,7 @@ This project hosts samples for the [HTML5 IMA SDK](https://developers.google.com
 ### Samples Breakdown
   * [Simple](https://mconnor.github.io/googleads-ima-html5/simple) - the bare minimum required for an IMA integration
   * [Advanced](https://mconnor.github.io/googleads-ima-html5/advanced/) - IMA integration with more advanced UI including event logging, play/pause, and fullscreen, and companion ads
+  * [mobile](https://mconnor.github.io/googleads-ima-html5/mobile_auto_skippable/) - IMA player with extra code for mobile. Video will play inline.  XML  tag is currently had coded in.
   * [Playlist](https://mconnor.github.io/googleads-ima-html5/playlist) - expands on the advanced sample to demonstrate an integration with a video playlist
   * [VPAID](https://mconnor.github.io/googleads-ima-html5/vpaid) - A sample VPAID ad that works with the IMA SDK
 
