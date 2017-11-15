@@ -47,8 +47,11 @@
 
     // Request video ads.
     var adsRequest = new google.ima.AdsRequest();
-    adsRequest.adTagUrl =
-      "https://mconnor.github.io/testVast/vast-icon-iframe-resource-" + postion + ".xml";
+    //adsRequest.adTagUrl =
+     // "https://mconnor.github.io/testVast/vast-icon-iframe-resource-" + postion + ".xml";
+       adsRequest.adTagUrl =
+        "http://rocketnumber9.org/vast-test/vast-icon-iframe-resource-" + postion + ".xml";
+                       
     // Specify the linear and nonlinear slot sizes. This helps the SDK to
     // select the correct creative if multiple are returned.
     adsRequest.linearAdSlotWidth = 640;
