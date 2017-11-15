@@ -10,7 +10,12 @@
   var intervalTimer;
   var videoContent;
 
+  let postion;
   function init() {
+     postion = getParamsFromMyScript("ads").split("=")[1];
+
+
+
     videoContent = document.getElementById("contentElement");
     setUpIMA();
   }
@@ -43,7 +48,7 @@
     // Request video ads.
     var adsRequest = new google.ima.AdsRequest();
     adsRequest.adTagUrl =
-      "https://mconnor.github.io/testVast/vast-icon-iframe-resource-top-right.xml";
+      "https://mconnor.github.io/testVast/vast-icon-iframe-resource-" + postion + ".xml";
     // Specify the linear and nonlinear slot sizes. This helps the SDK to
     // select the correct creative if multiple are returned.
     adsRequest.linearAdSlotWidth = 640;
@@ -175,6 +180,12 @@
     // setupUIForContent();
   }
 
+
+  function getParamsFromMyScript(idname) {
+    var _scriptSrc = document.getElementById(idname).src;
+    var arr = _scriptSrc.split("?");
+    return arr[1];
+  } 
   // Wire UI element references and UI event listeners.
   init();
 })();
