@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>Mobile Autoplay - Top Left Position</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Inline Autoplay mobile ad</h1>
+        <p>Inline skippable mobile ad playing here. Not full screen.</p>
+        <p>As of Chrome 53 and iOS 10, Android and iPhone support inline video playback and muted autoplay. This guide walks
+            you through the modifications to the simple sample required for this functionality.</p>
+
+    </div>
+    <div id="mainContainer">
+        <div id="content">
+            <video id="contentElement" playsinline muted>
+                <source src="//rmcdn.2mdn.net/Demo/vast_inspector/android.mp4"></source>
+                <source src="//rmcdn.2mdn.net/Demo/vast_inspector/android.webm"></source>
+            </video>
+
+        </div>
+        <div id="adContainer"></div>
+        <button id="playpause" title="Play/Pause">&#9654;</button>
+    </div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum, sed. Repudiandae, id, dolores quaerat et fuga officiis
+        sit placeat veritatis suscipit harum mollitia minus illum voluptatem nulla consequuntur perspiciatis provident!</p>
+    <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script type="text/javascript" id='ads' src="./ads.js?position=top-left"></script>
+</body>
+
+</html>
