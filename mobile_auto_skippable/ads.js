@@ -48,8 +48,8 @@
     // Request video ads.
     var adsRequest = new google.ima.AdsRequest();
     adsRequest.adTagUrl =
-    "./vast-icon-iframe-resource-" + postion + ".xml";
-    //"//mconnor.github.io/testVast/vast-icon-iframe-resource-" + postion + ".xml";
+    //"./vast-icon-iframe-resource-" + postion + ".xml";
+    "https://mconnor.github.io/testVast/vast-icon-iframe-resource-" + postion + ".xml";
       //  adsRequest.adTagUrl =
       //"//rocketnumber9.org/vast-test/vast-icon-iframe-resource-" + postion + ".xml";
                        
