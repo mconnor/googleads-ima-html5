@@ -1,31 +1,37 @@
 #mainContainer {
   position: relative;
-  width: 640px;
   height: 360px;
 }
 
 #content, #adContainer {
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: 50%;
   width: 640px;
   height: 360px;
+  margin-left: -320px;
 }
 
 #contentElement {
-  width: 640px;
-  height: 360px;
+  /* width: 640px;
+  height: 360px; */
   overflow: hidden;
 }
-p {
-  width: 640px;
-}
 
+.copy {
+  position: relative;
+
+  left: 50%;
+  width: 640px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: -320px;
+}
 
 
 #playpause {
   position: absolute;
-  left: 20px;
+  margin-left: -320px;
+  left: 55%;
   bottom: 20px;
   height: 40px;
   width: 100px;
