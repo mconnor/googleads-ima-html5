@@ -10,12 +10,15 @@ var ads = (function() {
   var intervalTimer;
   var videoContent;
 
-  let postion;
+  let tag;
   function init() {
-     postion = getParamsFromMyScript("ads").split("=")[1];
-
-
-
+    //  postion = getParamsFromMyScript("ads").split("=")[1];
+    //  devBool = getParamsFromMyScript("ads").split("=")[2];
+    console.log('getQueryVariable= ' + getQueryVariable('tag') );
+     tag = decodeURIComponent(getQueryVariable('tag'));
+    
+     console.log('tag = ' + tag );
+  
     videoContent = document.getElementById("contentElement");
     setUpIMA();
   }
@@ -47,10 +50,8 @@ var ads = (function() {
 
     // Request video ads.
     var adsRequest = new google.ima.AdsRequest();
-    adsRequest.adTagUrl =
+    adsRequest.adTagUrl = tag;
 
-   // "https://mconnor.github.io/testVast/vast-icon-dev-" + postion + ".xml";
-    "https://mconnor.github.io/testVast/staging-" + postion + ".xml";
                        
     // Specify the linear and nonlinear slot sizes. This helps the SDK to
     // select the correct creative if multiple are returned.
@@ -190,6 +191,18 @@ var ads = (function() {
     var arr = _scriptSrc.split("?");
     return arr[1];
   } 
+
+  function getQueryVariable(variable) {
+    var query = window.location.search.substring(1);
+    var vars = query.split('&');
+    for (var i = 0; i < vars.length; i++) {
+        var pair = vars[i].split('=');
+        if (decodeURIComponent(pair[0]) == variable) {
+            return decodeURIComponent(pair[1]);
+        }
+    }
+    console.log('Query variable %s not found', variable);
+}
   // Wire UI element references and UI event listeners.
   init();
   return {
