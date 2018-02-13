@@ -3,31 +3,77 @@
 <head>
   <title>Mobile Autoplay</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+      th {
+        text-align: left;
+      }
+  
+  
+      tr:nth-child(even) {
+        background-color: #eee;
+      }
+  
+      tr:nth-child(odd) {
+        background-color: #fff;
+      }
+  
+      @media (min-width: 640px) { 
+        table {
+        width: 50%;
+      }
+  
+      @media (max-width: 641px) { 
+        table {
+        width: 100%;
+      }
+    </style>
 </head>
 
 <body>
-  <div>
-    <h1>Inline Autoplay mobile ad</h1>
-    <p>Inline skippable mobile ad playing here. Not full screen.</p>
-    <p>As of Chrome 53 and iOS 10, Android and iPhone support inline video playback and muted autoplay. This guide walks you
-      through the modifications to the simple sample required for this functionality.</p>
 
-    <ul>
-      <li>
-        <a href="./top-right.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-top-right.xml">top-right</a>
-      </li>
-      <li>
-        <a href="./top-left.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-top-left.xml">top-left</a>
-      </li>
-      <li>
-        <a href="./bottom-left.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-bottom-left.xml">bottom-left</a>
-      </li>
-      <li>
-        <a href="./bottom-right.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-bottom-right.xml">bottom-right</a>
-      </li>
-    </ul>
+<h1>mobile_auto_skippable IMA player</h1>
+<table>
+		<tr>
+			<th>Dev</th>
+      <th>Staging</th>
+		</tr>
+		<tr>
+			<td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-top-left.xml">top-left</a>
+			</td>
+      <td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fstaging-top-left.xml">top-left</a>
+			</td>
+		</tr>
+    <tr>
+			<td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-top-right.xml">top-right</a>
+			</td>
+      <td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fstaging-top-right.xml">top-left</a>
+			</td>
+		</tr>
+    <tr>
+			<td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-bottom-left.xml">top-right</a>
+			</td>
+      <td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fstaging-bottom-left.xml">top-left</a>
+			</td>
+		</tr>
+    <tr>
+			<td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fvast-icon-dev-bottom-right.xml">top-right</a>
+			</td>
+      <td>
+          <a href="./mobile-ima.html?tag=https%253A%252F%252Fmconnor.github.io%252FtestVast%252Fstaging-bottom-right.xml">top-left</a>
+			</td>
+		</tr>
+		
+	</table>
 
-  </div>
+
+
 
 </body>
 

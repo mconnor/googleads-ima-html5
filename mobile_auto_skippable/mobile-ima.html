@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Mobile Autoplay - Top Left Position</title>
+    <title>Mobile Autoplay</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
@@ -12,7 +12,6 @@
         <p>Inline skippable mobile ad playing here. Not full screen.</p>
         <p>As of Chrome 53 and iOS 10, Android and iPhone support inline video playback and muted autoplay. This guide walks
             you through the modifications to the simple sample required for this functionality.</p>
-
     </div>
     <div id="mainContainer">
         <div id="content">
@@ -31,6 +30,11 @@
     </div>
     <script type="text/javascript" src="//imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
     <script type="text/javascript" id='ads' src="./ads.js"></script>
+    <script>
+        var pauseBtn = document.getElementById("playpause");
+        pauseBtn.addEventListener("click", ads.onContentPauseRequested());
+    
+    </script>
 </body>
 
 </html>
