@@ -1,4 +1,4 @@
-(function() {
+var ads = (function() {
   // Copyright 2013 Google Inc. All Rights Reserved.
   // You may study, modify, and use this example for any purpose.
   // Note that this example is provided "as is", WITHOUT WARRANTY
@@ -48,10 +48,9 @@
     // Request video ads.
     var adsRequest = new google.ima.AdsRequest();
     adsRequest.adTagUrl =
-    //"./vast-icon-iframe-resource-" + postion + ".xml";
-    "https://mconnor.github.io/testVast/vast-icon-dev-" + postion + ".xml";
-      //  adsRequest.adTagUrl =
-      //"//rocketnumber9.org/vast-test/vast-icon-iframe-resource-" + postion + ".xml";
+
+   // "https://mconnor.github.io/testVast/vast-icon-dev-" + postion + ".xml";
+    "https://mconnor.github.io/testVast/staging-" + postion + ".xml";
                        
     // Specify the linear and nonlinear slot sizes. This helps the SDK to
     // select the correct creative if multiple are returned.
@@ -170,6 +169,7 @@
   }
 
   function onContentPauseRequested() {
+    console.log('....onContentPauseRequested');
     videoContent.pause();
     // This function is where you should setup UI for showing ads (e.g.
     // display ad timer countdown, disable seeking etc.)
@@ -192,4 +192,7 @@
   } 
   // Wire UI element references and UI event listeners.
   init();
+  return {
+    onContentPauseRequested : onContentPauseRequested
+  }
 })();
