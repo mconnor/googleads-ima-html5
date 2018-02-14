@@ -1,4 +1,4 @@
-var ads = (function() {
+var Ad = (function() {
   // Copyright 2013 Google Inc. All Rights Reserved.
   // You may study, modify, and use this example for any purpose.
   // Note that this example is provided "as is", WITHOUT WARRANTY
@@ -9,18 +9,16 @@ var ads = (function() {
   var adDisplayContainer;
   var intervalTimer;
   var videoContent;
-
   let tag;
+
   function init() {
-    //  postion = getParamsFromMyScript("ads").split("=")[1];
-    //  devBool = getParamsFromMyScript("ads").split("=")[2];
-    console.log('getQueryVariable= ' + getQueryVariable('tag') );
      tag = decodeURIComponent(getQueryVariable('tag'));
-    
      console.log('tag = ' + tag );
-  
     videoContent = document.getElementById("contentElement");
     setUpIMA();
+
+    
+    
   }
 
   function setUpIMA() {
@@ -68,9 +66,7 @@ var ads = (function() {
     // We assume the adContainer is the DOM id of the element that will house
     // the ads.
     adDisplayContainer = new google.ima.AdDisplayContainer(
-      document.getElementById("adContainer"),
-      videoContent
-    );
+      document.getElementById("adContainer"), videoContent);
   }
 
   function playAds() {
@@ -166,11 +162,11 @@ var ads = (function() {
   function onAdError(adErrorEvent) {
     // Handle the error logging.
     console.log(adErrorEvent.getError());
-    adsManager.destroy();
+   // adsManager.destroy();
   }
 
   function onContentPauseRequested() {
-    console.log('....onContentPauseRequested');
+    console.log('....onContentPauseRequested ' + videoContent);
     videoContent.pause();
     // This function is where you should setup UI for showing ads (e.g.
     // display ad timer countdown, disable seeking etc.)
@@ -185,13 +181,6 @@ var ads = (function() {
     // setupUIForContent();
   }
 
-
-  function getParamsFromMyScript(idname) {
-    var _scriptSrc = document.getElementById(idname).src;
-    var arr = _scriptSrc.split("?");
-    return arr[1];
-  } 
-
   function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
     var vars = query.split('&');
@@ -202,10 +191,8 @@ var ads = (function() {
         }
     }
     console.log('Query variable %s not found', variable);
-}
+  }
   // Wire UI element references and UI event listeners.
   init();
-  return {
-    onContentPauseRequested : onContentPauseRequested
-  }
+
 })();
